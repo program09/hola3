@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    position: relative;
+}
+
+.heart-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensaje {
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.mensaje p{
+    width: auto;
+    font-size: 17px;
+    background-color: black;
+}
+
+.heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/001/187/511/non_2x/heart-png.png');
+    background-size: cover;
+    transform: rotate(-45deg);
+    animation: heartbeat 1s infinite alternate;
+}
+
+
+@keyframes heartbeat {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(5);
+    }
+}
+
+.explosion {
+    animation: explode 0.5s ease-in forwards;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(50);
+        opacity: 0;
+        display: none;
+    }
+}
+
+.show {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    background-image: url('64292284_2292144581008664_6709051319388209152_n.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
